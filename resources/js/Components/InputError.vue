@@ -1,13 +1,10 @@
 <script setup lang="ts">
-defineProps<{
-    message?: string;
-}>();
+defineProps({
+    message: {
+        type: String,
+    },
+});
 </script>
-
 <template>
-    <div v-show="message">
-        <p class="text-sm text-red-600">
-            {{ message }}
-        </p>
-    </div>
+    <span class="text-red-600 text-sm font-normal">{{ message }}</span>
 </template>
