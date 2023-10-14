@@ -1,21 +1,16 @@
 <?php
 
-namespace App\Models;
+// @formatter:off
+/**
+ * A helper file for your Eloquent Models
+ * Copy the phpDocs from this file to the correct Model,
+ * And remove them from this file, to prevent double declarations.
+ *
+ * @author Barry vd. Heuvel <barryvdh@gmail.com>
+ */
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-use App\Data\UserData;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
-use Spatie\LaravelData\WithData;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Spatie\Permission\Traits\HasRoles;
-use Laravel\Scout\Searchable;
-
+namespace App\Models{
 /**
  * App\Models\User
  *
@@ -54,74 +49,6 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class User extends Authenticatable implements HasMedia
-{
-    use HasApiTokens;
-    use HasFactory;
-    use InteractsWithMedia;
-    use Notifiable;
-    use HasRoles;
-    use WithData;
-    use Searchable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    protected $appends = [
-        'avatar',
-    ];
-
-    protected $dataClass = UserData::class;
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')->width('200')->nonQueued();
-    }
-
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('avatar')->withResponsiveImages()->singleFile();
-    }
-
-    public function getAvatarAttribute()
-    {
-        return $this->getFirstMedia('avatar');
-    }
-
-    public function toSearchableArray()
-    {
-        return [
-            'id' => (int) $this->id,
-            'name' => $this->name,
-            'email' => $this->email,
-        ];
-    }
+	class User extends \Eloquent implements \Spatie\MediaLibrary\HasMedia {}
 }
+
