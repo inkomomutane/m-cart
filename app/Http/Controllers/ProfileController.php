@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\User;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -36,8 +37,28 @@ class ProfileController extends Controller
         }
 
         $request->user()->save();
-
+        flash()->addSuccess('Informação actualizada com sucesso.');
         return Redirect::route('profile.edit');
+    }
+
+    public function logoUpload(User $user, Request $request)
+    {
+        try {
+            if (request()->hasFile('logo')) {
+                foreach ($request->logo as $logo) {
+                    $user->addMedia($logo)->toMediaCollection('avatar', 'avatar');
+                }
+            }
+            flash()->addSuccess('Foto de perfil adicionada com sucesso.');
+
+            return \back();
+        } catch (\Throwable $th) {
+
+            throw $th;
+            flash()->addError('Erro ao adicionar foto.');
+
+            return \back();
+        }
     }
 
     /**

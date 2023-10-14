@@ -39,7 +39,7 @@
                 </button>
                 <!-- Logo -->
                 <div :class="`${sidebarExpanded ? 'block' : 'md:hidden'}`">
-                    <img src="@/images/logo/logo.png" alt="Logo" width="80" />
+                    <img src="@/images/logo/logo.png" alt="Logo" class="w-10 h-10" />
                 </div>
                 <!-- Expand / collapse button -->
                 <div

@@ -35,11 +35,23 @@ return [
             'root' => storage_path('app'),
             'throw' => false,
         ],
+        'backup' => [
+            'driver' => 'local',
+            'root' => storage_path('backup'),
+            'throw' => false,
+        ],
 
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+        'avatar' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/avatar'),
+            'url' => env('APP_URL').'/storage/avatar',
             'visibility' => 'public',
             'throw' => false,
         ],

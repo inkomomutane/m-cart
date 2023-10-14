@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Dashboard from "./Links/Dashboard.vue";
+import Profile from "./Links/Profile.vue";
 </script>
 <template>
     <div class="space-y-8">
@@ -17,6 +18,7 @@ import Dashboard from "./Links/Dashboard.vue";
             </h3>
             <ul class="mt-3">
                 <Dashboard />
+                <Profile />
             </ul>
         </div>
     </div>

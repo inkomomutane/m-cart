@@ -23,16 +23,17 @@ const submit = () => {
 
 <template>
     <Head title="Autenticação"></Head>
-    <GuestLayout :show-footer="false">
+    <GuestLayout>
         <div
-            class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+            class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-full
+              lg:py-0"
         >
             <a
                 :href="route('profile.edit')"
                 class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
             >
                 <img
-                    class="w-64 mr-2"
+                    class="w-32 mr-2"
                     src="@/images/logo/logo.png"
                     alt="logo"
                 />
