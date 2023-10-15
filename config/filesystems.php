@@ -40,18 +40,23 @@ return [
             'root' => storage_path('backup'),
             'throw' => false,
         ],
+        'icon' => [
+            'driver' => 'local',
+            'root' => storage_path('icons'),
+            'throw' => false,
+        ],
 
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
         ],
         'avatar' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/avatar'),
-            'url' => env('APP_URL').'/storage/avatar',
+            'root' => storage_path('app/public/avatars'),
+            'url' => env('APP_URL') . '/storage/avatars',
             'visibility' => 'public',
             'throw' => false,
         ],

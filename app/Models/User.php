@@ -165,6 +165,7 @@ class User extends Authenticatable implements HasMedia
             'name' => $this->name,
             'email' => $this->email,
             'image' => $this->getFirstMediaUrl('avatar', 'thumb'),
+            'phone_number' => $this->phone_number
         ];
     }
 }

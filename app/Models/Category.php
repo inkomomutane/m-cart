@@ -91,6 +91,11 @@ class Category extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('thumb')->width('200')->nonQueued();
+        $this->addMediaConversion('icon')->width('200')->nonQueued();
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('icon')->singleFile();
     }
 }
