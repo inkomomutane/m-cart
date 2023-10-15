@@ -134,7 +134,7 @@ return [
         'key' => env('MEILISEARCH_KEY'),
         'index-settings' => [
             User::class => [
-                'filterableAttributes'=> ['id', 'name', 'email'],
+                'filterableAttributes' => ['id', 'name', 'email'],
                 'sortableAttributes' => ['created_at'],
                 // Other settings fields...
             ],
