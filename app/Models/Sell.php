@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Product $product
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Sell newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Sell newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Sell query()
@@ -30,7 +29,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|Sell whereQuantity($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sell whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sell whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Sell extends Model

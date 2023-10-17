@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Attribute $attribute
  * @property-read \App\Models\Product $product
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute query()
@@ -29,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute whereProductUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductAttribute whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class ProductAttribute extends Model

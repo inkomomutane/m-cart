@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Category $category
  * @property-read \App\Models\Product $product
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory query()
@@ -29,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereProductUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class ProductCategory extends Model

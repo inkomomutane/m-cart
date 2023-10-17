@@ -25,7 +25,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read Collection<int, \App\Models\Order> $orders
  * @property-read int|null $orders_count
  * @property-read \App\Models\User $user
- *
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus query()
@@ -36,7 +35,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OrderStatus whereUpdatedBy($value)
- *
  * @mixin \Eloquent
  */
 class OrderStatus extends Model

@@ -24,7 +24,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property-read \App\Models\Order $order
  * @property-read \App\Models\Product $product
  * @property-read \App\Models\Shipping|null $shipping
- *
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem query()
@@ -36,7 +35,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem whereShippingUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OrderItem whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class OrderItem extends Model

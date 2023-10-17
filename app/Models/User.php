@@ -30,30 +30,43 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string $email
  * @property string|null $phone_number
  * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property string $password
+ * @property mixed $password
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read Collection<int, \App\Models\Attribute> $attributes
  * @property-read int|null $attributes_count
- * @property-read Collection<int, \App\Models\Category> $categories
+ * @property-read \Kalnoy\Nestedset\Collection<int, \App\Models\Category> $categories
  * @property-read int|null $categories_count
  * @property-read Collection<int, \App\Models\CostumerAddress> $costumer_addresses
  * @property-read int|null $costumer_addresses_count
  * @property-read Collection<int, \App\Models\Coupon> $coupons
  * @property-read int|null $coupons_count
+ * @property-read mixed $avatar
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, Media> $media
+ * @property-read int|null $media_count
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
+ * @property-read int|null $notifications_count
  * @property-read Collection<int, \App\Models\OrderStatus> $order_statuses
  * @property-read int|null $order_statuses_count
  * @property-read Collection<int, \App\Models\Order> $orders
  * @property-read int|null $orders_count
+ * @property-read Collection<int, \Spatie\Permission\Models\Permission> $permissions
+ * @property-read int|null $permissions_count
  * @property-read Collection<int, \App\Models\Product> $products
  * @property-read int|null $products_count
+ * @property-read Collection<int, \Spatie\Permission\Models\Role> $roles
+ * @property-read int|null $roles_count
  * @property-read Collection<int, \App\Models\Shipping> $shippings
  * @property-read int|null $shippings_count
- *
+ * @property-read Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
+ * @property-read int|null $tokens_count
+ * @method static \Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
@@ -63,7 +76,6 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhoneNumber($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class User extends Authenticatable implements HasMedia

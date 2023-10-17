@@ -12,6 +12,6 @@ class MozRegionsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }

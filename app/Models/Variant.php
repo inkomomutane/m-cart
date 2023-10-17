@@ -23,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \App\Models\Product $product
  * @property-read Collection<int, \App\Models\VariantValue> $variant_values
  * @property-read int|null $variant_values_count
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Variant newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Variant newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Variant query()
@@ -32,7 +31,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereProductUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Variant extends Model

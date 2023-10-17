@@ -29,7 +29,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read int|null $order_items_count
  * @property-read \App\Models\OrderStatus $order_status
  * @property-read \App\Models\User $user
- *
+ * @method static \Database\Factories\OrderFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Order newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order query()
@@ -42,7 +42,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereStatusUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Order extends Model

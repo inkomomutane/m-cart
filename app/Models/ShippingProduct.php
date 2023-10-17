@@ -23,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Product $product
  * @property-read \App\Models\Shipping $shipping
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct query()
@@ -35,7 +34,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct whereShippingUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ShippingProduct whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class ShippingProduct extends Model

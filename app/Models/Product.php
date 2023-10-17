@@ -32,7 +32,7 @@ use Spatie\Tags\HasTags;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read Collection<int, \App\Models\Attribute> $attributes
  * @property-read int|null $attributes_count
- * @property-read Collection<int, \App\Models\Category> $categories
+ * @property-read \Kalnoy\Nestedset\Collection<int, \App\Models\Category> $categories
  * @property-read int|null $categories_count
  * @property-read Collection<int, \App\Models\OrderItem> $order_items
  * @property-read int|null $order_items_count
@@ -40,12 +40,14 @@ use Spatie\Tags\HasTags;
  * @property-read int|null $product_coupons_count
  * @property-read Collection<int, \App\Models\Sell> $sells
  * @property-read int|null $sells_count
+ * @property Collection<int, \Spatie\Tags\Tag> $tags
  * @property-read Collection<int, \App\Models\Shipping> $shippings
  * @property-read int|null $shippings_count
+ * @property-read int|null $tags_count
  * @property-read \App\Models\User $user
  * @property-read Collection<int, \App\Models\Variant> $variants
  * @property-read int|null $variants_count
- *
+ * @method static \Database\Factories\ProductFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product query()
@@ -62,7 +64,11 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereWeight($value)
- *
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withAnyTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @mixin \Eloquent
  */
 class Product extends Model

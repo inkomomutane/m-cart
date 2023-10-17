@@ -23,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\User $user
- *
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress query()
@@ -36,7 +35,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CostumerAddress whereUserId($value)
- *
  * @mixin \Eloquent
  */
 class CostumerAddress extends Model

@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Product $product
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon query()
@@ -26,7 +25,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon whereProductUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCoupon whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class ProductCoupon extends Model

@@ -27,7 +27,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read Collection<int, \App\Models\Product> $products
  * @property-read int|null $products_count
  * @property-read \App\Models\User $user
- *
+ * @method static \Database\Factories\ShippingFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping query()
@@ -37,7 +37,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Shipping whereUpdatedBy($value)
- *
  * @mixin \Eloquent
  */
 class Shipping extends Model

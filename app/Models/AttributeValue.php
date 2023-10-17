@@ -19,7 +19,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Attribute $attribute
- *
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue query()
@@ -28,7 +27,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AttributeValue whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class AttributeValue extends Model

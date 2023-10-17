@@ -31,7 +31,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read Collection<int, \App\Models\Order> $orders
  * @property-read int|null $orders_count
  * @property-read \App\Models\User $user
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon query()
@@ -48,7 +47,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Coupon whereUpdatedBy($value)
- *
  * @mixin \Eloquent
  */
 class Coupon extends Model

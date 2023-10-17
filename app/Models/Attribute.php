@@ -27,7 +27,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read Collection<int, \App\Models\Product> $products
  * @property-read int|null $products_count
  * @property-read \App\Models\User $user
- *
+ * @method static \Database\Factories\AttributeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute query()
@@ -37,7 +37,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedBy($value)
- *
  * @mixin \Eloquent
  */
 class Attribute extends Model
